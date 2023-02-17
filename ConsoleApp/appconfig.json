@@ -1,0 +1,13 @@
+{
+  "ConnectionStrings": {
+    "Default": "",
+    "API": {
+      "Endpoint": "https://localhost:5000/api/"
+    },
+    "Discord": {
+      "Motd": "Hello!",
+      "Prefix": ";;",
+      "StatusMessages": [ ":)" ]
+    }
+  }
+}
