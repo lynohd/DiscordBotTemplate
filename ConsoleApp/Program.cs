@@ -10,7 +10,11 @@ var host = Host
     .CreateDefaultBuilder()
     .ConfigureDefaults(args)
     //.ConfigureHostConfiguration(x => x.AddJsonFile("appconfig.json", false).Build())
-    .ConfigureHostConfiguration(x => x.AddUserSecrets(assembly))
+    .ConfigureHostConfiguration(x =>
+    {
+        //x.AddJsonFile("appconfig.json", false).Build();
+        x.AddUserSecrets(assembly).Build();
+    })
     .ConfigureServices((ctx, services) => services.Install(ctx.Configuration, assembly))
     .Build();
 
